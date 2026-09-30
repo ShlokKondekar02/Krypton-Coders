@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Krypton Coders Events - Join campus hackathons, web development workshops, DSA sprints, and beginner coding meetups.">
+  <meta name="keywords" content="Krypton Coders Events, college hackathon, coding workshops, student bootcamps, programming meetups">
+  <meta name="theme-color" content="#0a0f1d">
+  <title>Events & Hackathons | Krypton Coders</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glow & Interactive Canvas -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand" id="logo-link">
+        <div class="logo-symbol">
+          <span class="element-symbol">Kr</span>
+          <span class="element-number">36</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Krypton</span>
+          <span class="logo-badge">Coders</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="index.html#playground" class="nav-link">Sandbox</a></li>
+          <li><a href="index.html#team" class="nav-link">Team</a></li>
+          <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <div class="nav-actions-mobile">
+          <button class="btn btn-primary" id="mobile-join-btn">
+            <i class="fa-solid fa-code-branch"></i> Join Club
+          </button>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline-glow open-join-modal-btn" id="nav-join-btn">
+          <span class="btn-text">Join Club</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header Banner -->
+    <section class="page-header-section">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <span>/</span>
+          <span>Events & Bootcamps</span>
+        </div>
+        <h1 class="page-title">Events, Meetups & <span class="gradient-text">Hackathons</span></h1>
+        <p class="page-desc">
+          Join hands-on coding sessions, weekend team hackathons, problem-solving sprints, and peer mentorship meetups organized on our college campus.
+        </p>
+      </div>
+    </section>
+
+    <!-- Events Listing Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <!-- Filter Tabs -->
+        <div class="events-filter-bar">
+          <button class="filter-tab active" data-filter="all">All Events</button>
+          <button class="filter-tab" data-filter="upcoming">Upcoming</button>
+          <button class="filter-tab" data-filter="hackathon">Hackathons</button>
+          <button class="filter-tab" data-filter="workshop">Workshops</button>
+        </div>
+
+        <div class="events-grid" id="events-grid-container">
+          <!-- Event 1 (Featured Upcoming) -->
+          <div class="event-card upcoming hackathon" data-category="upcoming hackathon">
+            <div class="event-status-badge"><i class="fa-solid fa-fire"></i> Annual Event</div>
+            <div class="event-content">
+              <div class="event-meta">
+                <span class="event-date"><i class="fa-regular fa-calendar"></i> Nov 14-15, 2026</span>
+                <span class="event-venue"><i class="fa-solid fa-location-dot"></i> College Main Auditorium & Labs</span>
+              </div>
+              <h3 class="event-title">Krypton Campus Hackathon '26 (24-Hour)</h3>
+              <p class="event-description">
+                Our annual college hackathon! Team up with 2-4 classmates to brainstorm and build a working software project over 24 hours. Refreshments, mentor guidance, and prizes for top student teams!
+              </p>
+              <div class="event-tags">
+                <span>Team Projects</span>
+                <span>Certificates</span>
+                <span>Exciting Goodies</span>
+              </div>
+              <div class="event-action">
+                <button class="btn btn-primary btn-block register-event-btn" data-event-name="Krypton Campus Hackathon '26">Register Team</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 (Upcoming Workshop) -->
+          <div class="event-card upcoming workshop" data-category="upcoming workshop">
+            <div class="event-status-badge badge-blue"><i class="fa-solid fa-laptop-file"></i> Workshop</div>
+            <div class="event-content">
+              <div class="event-meta">
+                <span class="event-date"><i class="fa-regular fa-calendar"></i> Oct 18, 2026</span>
+                <span class="event-venue"><i class="fa-solid fa-location-dot"></i> CS Lab 2</span>
+              </div>
+              <h3 class="event-title">Getting Started with React & Modern Web Dev</h3>
+              <p class="event-description">
+                Learn the essentials of modern frontend development. We will build a neat student task manager together using React and deploy it live on the web.
+              </p>
+              <div class="event-tags">
+                <span>Beginner Friendly</span>
+                <span>Hands-on Code</span>
+                <span>Certificate</span>
+              </div>
+              <div class="event-action">
+                <button class="btn btn-outline-glow btn-block register-event-btn" data-event-name="React Web Dev Workshop">RSVP Seat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 (Hackathon / Contest) -->
+          <div class="event-card hackathon" data-category="hackathon">
+            <div class="event-status-badge badge-purple"><i class="fa-solid fa-bolt"></i> Weekly Practice</div>
+            <div class="event-content">
+              <div class="event-meta">
+                <span class="event-date"><i class="fa-regular fa-calendar"></i> Oct 24, 2026</span>
+                <span class="event-venue"><i class="fa-solid fa-location-dot"></i> Virtual (Discord & HackerRank)</span>
+              </div>
+              <h3 class="event-title">CodeStorm: Weekend DSA Practice Sprint</h3>
+              <p class="event-description">
+                A friendly 2-hour problem solving sprint on HackerRank covering arrays, strings, and beginner logic. Peer solution walkthroughs right after the contest!
+              </p>
+              <div class="event-tags">
+                <span>HackerRank</span>
+                <span>Problem Walkthrough</span>
+                <span>All Batches</span>
+              </div>
+              <div class="event-action">
+                <button class="btn btn-outline-glow btn-block register-event-btn" data-event-name="CodeStorm Weekend DSA Sprint">Set Reminder</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4 (Workshop) -->
+          <div class="event-card workshop" data-category="workshop">
+            <div class="event-status-badge badge-cyan"><i class="fa-solid fa-terminal"></i> Fresher Special</div>
+            <div class="event-content">
+              <div class="event-meta">
+                <span class="event-date"><i class="fa-regular fa-calendar"></i> Oct 25, 2026</span>
+                <span class="event-venue"><i class="fa-solid fa-location-dot"></i> Seminar Hall A</span>
+              </div>
+              <h3 class="event-title">Git & GitHub Kickstart for Freshers</h3>
+              <p class="event-description">
+                Never used Git before? No problem! Learn essential commands, how to manage code repositories on GitHub, and how to collaborate on group assignments.
+              </p>
+              <div class="event-tags">
+                <span>Freshers Welcome</span>
+                <span>Live Demo</span>
+                <span>Setup Help</span>
+              </div>
+              <div class="event-action">
+                <button class="btn btn-outline-glow btn-block register-event-btn" data-event-name="Git & GitHub Kickstart">RSVP Seat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathon Schedule Timeline -->
+    <section class="section timeline-section" style="background: rgba(10, 15, 27, 0.4);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">SCHEDULE BREAKDOWN</span>
+          <h2 class="section-title">24-Hour Hackathon <span class="gradient-text">Timeline</span></h2>
+          <p class="section-subtitle">Here is what a typical Krypton Coders campus hackathon weekend looks like from start to finish.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="fa-solid fa-flag-checkered"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-time">Saturday • 09:30 AM</span>
+              <h4>Check-in & Team Registration</h4>
+              <p>Participants arrive at the college CS lab, set up their workstations, connect to high-speed campus Wi-Fi, and grab club badges.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-time">Saturday • 10:30 AM</span>
+              <h4>Problem Statement Reveal & Hacking Begins</h4>
+              <p>Themes around campus utilities, sustainability, educational tools, and open innovation are announced. Teams start planning and building.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="fa-solid fa-comments"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-time">Saturday • 05:00 PM</span>
+              <h4>Mentor Review Round #1</h4>
+              <p>Senior student developers and alumni mentors visit each team's table to debug roadblocks, suggest libraries, and refine project architecture.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="fa-solid fa-mug-hot"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-time">Sunday • 12:00 AM (Midnight)</span>
+              <h4>Midnight Pizza & Mini Gaming Break</h4>
+              <p>Snacks, tea, and quick multiplayer games (Skribbl.io & typing races) to recharge everyone's energy for the overnight coding sprint.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-time">Sunday • 10:30 AM</span>
+              <h4>Code Freeze & Live Demos</h4>
+              <p>Teams push their code to GitHub, deploy demo links, and present a 3-minute live demonstration to student peers and faculty judges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events Recaps -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">PREVIOUS SESSIONS</span>
+          <h2 class="section-title">Past Event <span class="gradient-text">Highlights</span></h2>
+          <p class="section-subtitle">Take a peek at what our members learned and built in our recent campus coding sessions.</p>
+        </div>
+
+        <div class="past-events-grid">
+          <div class="recap-card">
+            <div class="recap-date"><i class="fa-regular fa-calendar"></i> August 2026</div>
+            <h3 class="recap-title">Freshers Python & Logic Bootcamp</h3>
+            <p class="recap-desc">Over 60 freshers learned basic Python syntax, data types, and wrote mini CLI games (Number Guessing & Hangman) in a single afternoon.</p>
+            <span class="recap-stat-badge"><i class="fa-solid fa-users"></i> 65+ Attendees</span>
+          </div>
+
+          <div class="recap-card">
+            <div class="recap-date"><i class="fa-regular fa-calendar"></i> July 2026</div>
+            <h3 class="recap-title">Web Dev 101: Building Your Portfolio</h3>
+            <p class="recap-desc">Step-by-step hands-on session where attendees built their personal student developer portfolios with HTML5, CSS Flexbox, and deployed on GitHub Pages.</p>
+            <span class="recap-stat-badge"><i class="fa-solid fa-users"></i> 48+ Portfolios Live</span>
+          </div>
+
+          <div class="recap-card">
+            <div class="recap-date"><i class="fa-regular fa-calendar"></i> May 2026</div>
+            <h3 class="recap-title">LeetCode Speed Coding Scrimmage</h3>
+            <p class="recap-desc">Intra-college 90-minute competitive coding contest with 4 algorithmic questions. Senior members walked through solutions on the whiteboard.</p>
+            <span class="recap-stat-badge"><i class="fa-solid fa-code"></i> 40+ Participants</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Suggest an Event Banner -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-glow"></div>
+          <div class="cta-content">
+            <span class="cta-tag"><i class="fa-solid fa-hand-holding-hand"></i> COMMUNITY-DRIVEN</span>
+            <h2 class="cta-title">Want to propose a workshop or study topic?</h2>
+            <p class="cta-desc">If there is a language, framework, or concept you want our club to cover, tell us! We love organizing sessions students care about.</p>
+            <div class="cta-btns">
+              <button class="btn btn-primary btn-lg open-join-modal-btn">
+                <i class="fa-solid fa-paper-plane"></i> Submit Event Idea
+              </button>
+              <a href="index.html" class="btn btn-glass btn-lg">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="logo-brand">
+          <div class="logo-symbol">
+            <span class="element-symbol">Kr</span>
+            <span class="element-number">36</span>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">Krypton</span>
+            <span class="logo-badge">Coders</span>
+          </div>
+        </a>
+        <p class="footer-tagline">
+          The student coding club of our college campus. Run by students, for students, to learn programming, build cool projects, and grow together.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About Society</a></li>
+          <li><a href="events.html">Events & Meetups</a></li>
+          <li><a href="projects.html">Student Projects</a></li>
+          <li><a href="resources.html">Learning Resources</a></li>
+          <li><a href="index.html#playground">Code Sandbox</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Community</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#team">Leadership Team</a></li>
+          <li><a href="index.html#faq">Membership FAQ</a></li>
+          <li><a href="#" class="open-join-modal-btn">Application Form</a></li>
+          <li><a href="https://github.com" target="_blank">Open Source Hub</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-heading">Stay in the Loop</h4>
+        <p class="newsletter-sub">Get notified about upcoming hackathons, tech talks, and open project slots.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <div class="input-with-btn">
+            <input type="email" placeholder="your.name@college.edu" required id="newsletter-email" aria-label="College Email">
+            <button type="submit" class="btn btn-primary" id="newsletter-submit"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Krypton Coders Society. All rights reserved. Crafted with 💚 &amp; Code.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <span class="dot-sep">•</span>
+        <a href="#">Terms of Community</a>
+        <span class="dot-sep">•</span>
+        <a href="#navbar" id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Join Club Modal Form -->
+  <div class="modal-overlay" id="join-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <h3 id="modal-title" class="modal-title">Apply to <span class="gradient-text">Krypton Coders</span></h3>
+        <p class="modal-sub">Fill out the details below. Our team reviews all applications within 48 hours.</p>
+      </div>
+
+      <form id="join-form" class="join-form" novalidate>
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="applicant-name">Full Name <span class="req">*</span></label>
+            <input type="text" id="applicant-name" placeholder="e.g. Alex Morgan" required>
+            <span class="form-error-msg" id="name-error">Please enter your name</span>
+          </div>
+
+          <div class="form-group">
+            <label for="applicant-email">College Email <span class="req">*</span></label>
+            <input type="email" id="applicant-email" placeholder="student@college.edu" required>
+            <span class="form-error-msg" id="email-error">Please enter a valid email address</span>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="applicant-year">Year of Study <span class="req">*</span></label>
+            <select id="applicant-year" required>
+              <option value="" disabled selected>Select Year</option>
+              <option value="1">1st Year (Freshman)</option>
+              <option value="2">2nd Year (Sophomore)</option>
+              <option value="3">3rd Year (Junior)</option>
+              <option value="4">4th Year (Senior)</option>
+              <option value="postgrad">Postgraduate / Masters</option>
+            </select>
+            <span class="form-error-msg" id="year-error">Please select your year</span>
+          </div>
+
+          <div class="form-group">
+            <label for="applicant-domain">Primary Domain Interest <span class="req">*</span></label>
+            <select id="applicant-domain" required>
+              <option value="" disabled selected>Select Track</option>
+              <option value="web">Full-Stack Web & Mobile</option>
+              <option value="ai">AI / ML & Data Science</option>
+              <option value="cp">Competitive Programming & DSA</option>
+              <option value="cloud">Cloud Computing & DevOps</option>
+              <option value="web3">Web3 & Blockchain</option>
+              <option value="oss">Open Source & Git</option>
+            </select>
+            <span class="form-error-msg" id="domain-error">Please choose a domain</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="applicant-github">GitHub / Portfolio URL (Optional)</label>
+          <input type="url" id="applicant-github" placeholder="https://github.com/username">
+        </div>
+
+        <div class="form-group">
+          <label for="applicant-reason">What excites you about Krypton Coders?</label>
+          <textarea id="applicant-reason" rows="3" placeholder="Tell us about your interests, recent projects, or what you'd like to build..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-application-btn">
+          <span class="btn-text">Submit Application</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
